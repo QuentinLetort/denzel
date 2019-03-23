@@ -2,9 +2,9 @@ const Express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-const imdb = require('./src/imdb');
-const mongodbConfig =require('./config').mongodbConfig;
-const actorsID=require('./config').actorsID;
+const imdb = require('../src/imdb');
+const mongodbConfig =require('../config').mongodbConfig;
+const actorsID=require('../config').actorsID;
 
 const DENZEL_ID= actorsID.DENZEL_IMDB_ID;
 const CONNECTION_URL = mongodbConfig.URL;
