@@ -60,8 +60,8 @@ app.get("/movies/search", (request, response) => {
 		metascore = 0;
 	}
     collection.aggregate([
-		{$match: {metascore: {$gte: metascore}}},
-		{$limit: limit},
+		{$match: {metascore: {$gte: parseInt(metascore)}}},
+		{$limit: parseInt(limit)},
 		{$sort: {metascore: -1}}
 	]).toArray((error, result) => {
         if(error) {
